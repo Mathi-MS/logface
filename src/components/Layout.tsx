@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import {
   ChevronDown,
+  Database,
   Gauge,
   LayoutGrid,
   LogIn,
@@ -30,6 +31,7 @@ const navItems: { to: string; label: string; icon: LucideIcon }[] = [
 const moreItems: { label: string; icon: LucideIcon; to?: string }[] = [
   { label: 'Report', icon: NotebookText, to: '/reports' },
   { label: 'Settings', icon: Settings },
+  { label: 'Masters', icon: Database, to: '/masters' },
   { label: 'User Management', icon: UserRound },
 ]
 

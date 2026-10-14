@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard'
 import EmployeePage from './pages/Employee'
 import EmployeeProfile from './pages/EmployeeProfile'
 import Login from './pages/Login'
+import Masters from './pages/Masters'
 import NotFound from './pages/NotFound'
 import EmployeePayslips from './pages/Payroll'
 import PayslipDetail from './pages/PayslipDetail'
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="payroll" element={<EmployeePayslips />} />
         <Route path="payroll/:code/:period" element={<PayslipDetail />} />
         <Route path="reports" element={<Reports />} />
+        <Route path="masters" element={<Masters />} />
         <Route path="home" element={<Navigate to="/dashboard" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>

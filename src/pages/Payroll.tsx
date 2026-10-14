@@ -576,13 +576,13 @@ export default function EmployeePayslips() {
           <p className="mt-0.5 text-[12.5px] text-[#6b7280]">Manage employee payroll records and publish monthly payslips.</p>
         </div>
         <div className="flex gap-2.5">
-          <button
+          {/* <button
             type="button"
             onClick={() => setUploading({ code: '', periodKey: periodKey(latestPeriod) })}
             className="flex h-9 items-center gap-2 rounded-md bg-[#1976d2] px-4 text-[12.5px] font-medium text-white shadow-sm hover:bg-[#1565c0]"
           >
             <Plus className="h-4 w-4" /> Upload Payroll
-          </button>
+          </button> */}
           <button
             type="button"
             onClick={() => bulkInput.current?.click()}
