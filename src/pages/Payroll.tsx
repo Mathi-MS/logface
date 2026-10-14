@@ -14,7 +14,6 @@ import {
   FileText,
   Info,
   MoreVertical,
-  Plus,
   RotateCw,
   Search,
   Send,
