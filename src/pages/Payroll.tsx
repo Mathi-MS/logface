@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import clsx from 'clsx'
 import payrollReportUrl from '../assets/payroll.xlsx?url'
+import templateUrl from '../assets/Download.xlsx?url'
 import { useNavigate } from 'react-router-dom'
 import { Checkbox, FilterBox } from '../components/CheckboxFilter'
 import MonthPicker from '../components/MonthPicker'
@@ -33,7 +34,6 @@ import { employees } from '../data/employees'
 import {
   defaultSalary,
   downloadPayslip,
-  downloadTemplate,
   monthLabel,
   monthRangeOf,
   parsePeriodKey,
@@ -461,7 +461,6 @@ export default function EmployeePayslips() {
 
   // The released payroll month matching the picker, if any
   const selectedPeriod = releasedMonths.find((m) => m.year === ym.year && m.month === ym.month)
-  const latestPeriod = selectedPeriod ?? releasedMonths[0]
 
   useEffect(() => {
     if (!toast) return
@@ -706,13 +705,13 @@ export default function EmployeePayslips() {
               <Info className="h-4 w-4 text-[#1976d2]" />
               Upload individual payslips or import multiple employees using an Excel template.
             </span>
-            <button
-              type="button"
-              onClick={() => downloadTemplate(latestPeriod)}
+            <a
+              href={templateUrl}
+              download="Download.xlsx"
               className="flex items-center gap-1.5 font-medium text-[#1976d2] hover:underline"
             >
               <Download className="h-3.5 w-3.5" /> Download Excel Template
-            </button>
+            </a>
           </div>
 
           <h2 className="mt-4 text-[15px] font-medium text-[#333]">Payroll for {monthYear}</h2>
